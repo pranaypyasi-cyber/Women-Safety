@@ -574,3 +574,28 @@ a:focus-visible {
   color: var(--sos);
   font-weight: 700;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+.logo img {
+  display: block;
+  flex-shrink: 0;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.logo-name {
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.logo-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: #d9c8ea;
+}
