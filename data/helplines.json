@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Emergency Response (Police, Fire, Ambulance)",
+    "number": "112",
+    "category": "Emergency",
+    "description": "All-in-one emergency number. Works from any phone."
+  },
+  {
+    "name": "Police",
+    "number": "100",
+    "category": "Emergency",
+    "description": "Call the police directly for immediate help."
+  },
+  {
+    "name": "Women Helpline",
+    "number": "1091",
+    "category": "Women",
+    "description": "For women facing harassment, stalking or violence."
+  },
+  {
+    "name": "Women Helpline (Domestic Abuse)",
+    "number": "181",
+    "category": "Women",
+    "description": "Support and guidance for abuse at home."
+  },
+  {
+    "name": "Cyber Crime Helpline",
+    "number": "1930",
+    "category": "Cyber",
+    "description": "Report online harassment, stalking or financial fraud."
+  },
+  {
+    "name": "Ambulance",
+    "number": "108",
+    "category": "Health",
+    "description": "Emergency medical help and ambulance."
+  },
+  {
+    "name": "Tele-MANAS (Mental Health)",
+    "number": "14416",
+    "category": "Health",
+    "description": "Free counselling and mental health support."
+  },
+  {
+    "name": "Free Legal Aid (NALSA)",
+    "number": "15100",
+    "category": "Legal",
+    "description": "Free legal advice and assistance."
+  },
+  {
+    "name": "Childline",
+    "number": "1098",
+    "category": "Children",
+    "description": "Help for children in distress or danger."
+  }
+]

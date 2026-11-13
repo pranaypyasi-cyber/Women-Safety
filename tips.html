@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Safety tips | Suraksha</title>
+  <meta name="description" content="Simple safety tips for travel, online life, work and home.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">Suraksha</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="helplines.html">Helplines</a>
+      <a href="tips.html" class="active">Safety tips</a>
+      <a href="contacts.html">My contacts</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <h1>Safety tips</h1>
+      <p>Small habits that keep you safer. Pick a topic to see tips for it.</p>
+    </section>
+
+    <section class="section">
+
+      <!-- Filter buttons: JS inhe category ke hisaab se kaam karwata hai -->
+      <div class="chips" id="chips" role="group" aria-label="Filter tips by topic">
+        <button type="button" class="chip is-active" data-category="All" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-category="Travel" aria-pressed="false">Travel</button>
+        <button type="button" class="chip" data-category="Online" aria-pressed="false">Online</button>
+        <button type="button" class="chip" data-category="Workplace" aria-pressed="false">Workplace</button>
+        <button type="button" class="chip" data-category="At home" aria-pressed="false">At home</button>
+      </div>
+
+      <p id="tips-count" class="result-count" aria-live="polite"></p>
+
+      <!-- JavaScript yahan tips ke cards daal dega -->
+      <div id="tips-list" class="grid"></div>
+
+      <p class="note">
+        In danger right now? Do not wait. <a href="tel:112">Call 112</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Suraksha is an information portal made for a SIH project. In danger? Call 112.</p>
+  </footer>
+
+  <script src="tips.js"></script>
+</body>
+</html>

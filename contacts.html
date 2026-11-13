@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My contacts | Suraksha</title>
+  <meta name="description" content="Save your trusted emergency contacts and call them in one tap.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">Suraksha</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="helplines.html">Helplines</a>
+      <a href="tips.html">Safety tips</a>
+      <a href="contacts.html" class="active">My contacts</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <h1>My emergency contacts</h1>
+      <p>Save up to 5 people you trust. Call them in one tap when you need help.</p>
+    </section>
+
+    <section class="section contacts-layout">
+
+      <!-- Contact add karne ka form -->
+      <form id="contact-form" class="contact-form" novalidate>
+        <h2>Add a contact</h2>
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" maxlength="40" autocomplete="off" placeholder="e.g. Mummy" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Mobile number</label>
+          <input type="tel" id="phone" inputmode="numeric" maxlength="15" autocomplete="off" placeholder="10-digit number" required>
+        </div>
+
+        <div class="field">
+          <label for="relation">Relation (optional)</label>
+          <input type="text" id="relation" maxlength="30" autocomplete="off" placeholder="e.g. Mother, Friend">
+        </div>
+
+        <!-- Galti hone par yahan message aayega -->
+        <p id="form-message" class="form-message" role="alert" aria-live="assertive"></p>
+
+        <button type="submit" class="button">Save contact</button>
+      </form>
+
+      <!-- Saved contacts ki list -->
+      <div class="contacts-saved">
+        <h2>Saved contacts <span id="contact-count" class="count"></span></h2>
+
+        <ul id="contact-list" class="contact-list"></ul>
+
+        <p id="contacts-empty" class="empty">
+          No contacts saved yet. Add your first trusted person using the form.
+        </p>
+
+        <p class="note">
+          Your contacts are saved only in this browser on this device. They are not sent anywhere.
+        </p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Suraksha is an information portal made for a SIH project. In danger? Call 112.</p>
+  </footer>
+
+  <script src="contacts.js"></script>
+</body>
+</html>

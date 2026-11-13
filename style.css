@@ -1,0 +1,576 @@
+/* ===== COLORS aur settings ek jagah (CSS variables) =====
+   Rang badalna ho toh sirf yahin badlo, poori site badal jayegi */
+:root {
+  --plum: #3b1e54;        /* main dark color */
+  --plum-soft: #5a3a78;
+  --lilac: #f1ebf7;       /* light background */
+  --paper: #fffdfb;       /* page background */
+  --sos: #c8102e;         /* emergency red */
+  --sos-dark: #9e0c24;
+  --text: #2b2233;
+  --line: #e2d8ec;
+  --radius: 14px;
+}
+
+/* ===== RESET: har browser ki default spacing hatao ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hind", system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--paper);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+a {
+  color: inherit;
+}
+
+/* Keyboard se navigate karne wale ko focus dikhe */
+a:focus-visible {
+  outline: 3px solid var(--plum-soft);
+  outline-offset: 3px;
+}
+
+/* ===== HEADER / NAVBAR ===== */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;            /* chhoti screen pe niche aa jaye */
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--plum);
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover,
+.nav a.active {
+  border-bottom-color: #fff;
+}
+
+.site-header a:focus-visible {
+  outline-color: #fff;
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  flex-direction: column;     /* mobile pe upar-neeche */
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 3rem 1.25rem;
+  background: var(--lilac);
+}
+
+.hero-text {
+  max-width: 34rem;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  line-height: 1.15;
+  color: var(--plum);
+  margin-bottom: 0.75rem;
+}
+
+/* Bada red emergency button */
+.sos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  background: var(--sos);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 0 0 rgba(200, 16, 46, 0.5);
+  animation: pulse 2.4s infinite;
+}
+
+.sos:hover {
+  background: var(--sos-dark);
+}
+
+.sos:focus-visible {
+  outline-color: var(--plum);
+  outline-offset: 6px;
+}
+
+.sos-number {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sos-label {
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+/* Halka sa pulse effect, sirf button pe */
+@keyframes pulse {
+  70%  { box-shadow: 0 0 0 22px rgba(200, 16, 46, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(200, 16, 46, 0); }
+}
+
+/* Jinko animation pasand nahi (settings mein off), unke liye band */
+@media (prefers-reduced-motion: reduce) {
+  .sos {
+    animation: none;
+  }
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 3rem 1.25rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.section-tint {
+  max-width: none;
+  background: var(--lilac);
+}
+
+/* tint section ke andar content center rakhne ke liye */
+.section-tint > * {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  color: var(--plum);
+  line-height: 1.2;
+}
+
+.section-intro {
+  margin: 0.4rem auto 1.5rem;
+  color: var(--plum-soft);
+}
+
+/* ===== CARDS ===== */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;   /* mobile: ek column */
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: var(--plum);
+  margin-bottom: 0.4rem;
+}
+
+.call-link {
+  display: inline-block;
+  margin-top: 0.9rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  background: var(--plum);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.call-link:hover {
+  background: var(--plum-soft);
+}
+
+.more {
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+.more a {
+  color: var(--plum);
+}
+
+/* ===== CALL TO ACTION ===== */
+.cta {
+  text-align: center;
+}
+
+.cta p {
+  margin: 0.5rem 0 1.25rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  background: var(--plum);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--plum-soft);
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  padding: 1.5rem 1.25rem;
+  background: var(--plum);
+  color: #fff;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* ===== BADI SCREEN (tablet / laptop) ===== */
+@media (min-width: 48rem) {
+  .hero {
+    flex-direction: row;        /* text left, button right */
+    justify-content: center;
+    text-align: left;
+    gap: 4rem;
+    padding: 4.5rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);  /* teen column */
+  }
+
+  .site-header {
+    padding: 1rem 2rem;
+  }
+}
+
+/* ===== HELPLINES PAGE ===== */
+.page-head {
+  padding: 2.5rem 1.25rem;
+  background: var(--lilac);
+  text-align: center;
+}
+
+.page-head h1 {
+  font-size: 2.2rem;
+  color: var(--plum);
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+/* Search box aur dropdown */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.field label {
+  font-weight: 600;
+  color: var(--plum);
+}
+
+.field input,
+.field select {
+  font: inherit;
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--text);
+}
+
+.field input:focus-visible,
+.field select:focus-visible {
+  outline: 3px solid var(--plum-soft);
+  outline-offset: 2px;
+}
+
+.result-count {
+  margin-bottom: 1rem;
+  color: var(--plum-soft);
+  font-weight: 500;
+}
+
+/* Category ka chhota label card ke upar */
+.tag {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.1rem 0.7rem;
+  border-radius: 999px;
+  background: var(--lilac);
+  color: var(--plum);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.empty {
+  padding: 1.5rem;
+  text-align: center;
+  background: var(--lilac);
+  border-radius: var(--radius);
+}
+
+.note {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: var(--plum-soft);
+}
+
+@media (min-width: 48rem) {
+  .filters {
+    flex-direction: row;
+  }
+
+  .field:first-child {
+    flex: 2;
+  }
+}
+
+/* ===== TIPS PAGE: filter buttons ===== */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.chip {
+  font: inherit;
+  font-weight: 600;
+  padding: 0.45rem 1.1rem;
+  border: 1.5px solid var(--plum);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--plum);
+  cursor: pointer;
+}
+
+.chip:hover {
+  background: var(--lilac);
+}
+
+/* Jo button selected hai */
+.chip.is-active {
+  background: var(--plum);
+  color: #fff;
+}
+
+.chip:focus-visible {
+  outline: 3px solid var(--plum-soft);
+  outline-offset: 2px;
+}
+
+.note a {
+  color: var(--sos);
+  font-weight: 700;
+}
+
+/* ===== CONTACTS PAGE ===== */
+.contacts-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact-form,
+.contacts-saved {
+  min-width: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  align-self: start;
+}
+
+.contact-form h2,
+.contacts-saved h2 {
+  font-size: 1.4rem;
+  color: var(--plum);
+}
+
+.contact-form .button {
+  border: 0;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.form-message {
+  min-height: 1.5rem;
+  color: var(--sos);
+  font-weight: 600;
+}
+
+.count {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--plum-soft);
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.1rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-info strong {
+  font-size: 1.15rem;
+  color: var(--plum);
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.contact-actions .call-link {
+  margin-top: 0;
+}
+
+.delete-btn {
+  font: inherit;
+  font-weight: 600;
+  padding: 0.45rem 1.1rem;
+  border: 1.5px solid var(--sos);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--sos);
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: var(--sos);
+  color: #fff;
+}
+
+.delete-btn:focus-visible {
+  outline: 3px solid var(--plum-soft);
+  outline-offset: 2px;
+}
+
+.contacts-saved .empty {
+  margin-top: 1rem;
+}
+
+/* hidden attribute ko CSS se dabne se bachao */
+[hidden] {
+  display: none !important;
+}
+
+@media (min-width: 48rem) {
+  .contacts-layout {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ===== ABOUT PAGE ===== */
+/* Lambi paragraph wali sections: line chhoti rakho taaki padhna aasan ho */
+.prose p {
+  max-width: 40rem;
+  margin-top: 0.8rem;;
+}
+
+.prose a,
+.card .more-link {
+  color: var(--plum);
+  font-weight: 600;
+}
+
+.card .more-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+}
+
+.tech-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.tech-list li {
+  padding: 0.7rem 1rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.tech-list strong {
+  color: var(--plum);
+}
+
+.disclaimer a {
+  color: var(--sos);
+  font-weight: 700;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Helplines | Suraksha</title>
+  <meta name="description" content="Search emergency and women safety helpline numbers in India.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">Suraksha</a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="helplines.html" class="active">Helplines</a>
+      <a href="tips.html">Safety tips</a>
+      <a href="contacts.html">My contacts</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <h1>Helpline numbers</h1>
+      <p>Tap a number to call. All of these are free to call from any phone.</p>
+    </section>
+
+    <section class="section">
+
+      <!-- Search aur filter -->
+      <div class="filters">
+        <div class="field">
+          <label for="search">Search</label>
+          <input type="search" id="search" placeholder="Try: cyber, police, 1091">
+        </div>
+
+        <div class="field">
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="All">All</option>
+            <option value="Emergency">Emergency</option>
+            <option value="Women">Women</option>
+            <option value="Cyber">Cyber</option>
+            <option value="Health">Health</option>
+            <option value="Legal">Legal</option>
+            <option value="Children">Children</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Screen reader ko batane ke liye ki kitne results mile -->
+      <p id="result-count" class="result-count" aria-live="polite"></p>
+
+      <!-- JavaScript yahan cards daal dega -->
+      <div id="helpline-list" class="grid"></div>
+
+      <p id="empty-message" class="empty" hidden>
+        No helpline found. Try a different word, or choose All categories.
+      </p>
+
+      <p class="note">
+        Numbers can change. Please check them on official government websites before sharing.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Suraksha is an information portal made for a SIH project. In danger? Call 112.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
